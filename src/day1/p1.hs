@@ -3,7 +3,6 @@ import Data.List
 
 main = do
   contents <- readFile "input.txt"
-  -- let lines = split
   let elvesRaw = splitOn "\n\n" contents
   let elves = map (\x -> map read (splitOn "\n" x)) elvesRaw
   let result = listMax (map sum elves)
